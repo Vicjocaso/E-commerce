@@ -60,12 +60,7 @@ import Product from "../Product/Product.vue";
 
 export default {
   data: () => ({
-    items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" },
-    ],
+    items: [],
   }),
   components: {
     Product,

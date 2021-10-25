@@ -1,7 +1,19 @@
 <template>
-  <v-card id="center" class="mx-auto my-12" max-width="374">
-    <v-img height="250" src="./image-product-1.jpg"></v-img>
-  </v-card>
+  <conteiner>
+    <div class="d-flex flex-row mb-6 pb-6">
+      <v-spacer></v-spacer>
+      <v-card max-width="344" class="mb-6" outlined>
+        <v-img class="p-5" src="./image-product-1.jpg"></v-img>
+      </v-card>
+      <div class="mx-6">
+        <h1>Fall Limited Edition Sneaker</h1>
+        <p id="productp">
+          Your challenge is to build out this e-commerce product page and get it
+        </p>
+        <v-spacer></v-spacer>
+      </div>
+    </div>
+  </conteiner>
 </template>
 
 <script>
@@ -26,5 +38,9 @@ export default {
   margin: auto;
   width: 50%;
   padding: 10px;
+}
+#productp {
+  color: navy;
+  text-indent: 30px;
 }
 </style>
