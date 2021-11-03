@@ -38,16 +38,20 @@
               mdi-cart
             </v-icon>
           </div>
-          <a>
-            <v-img
-              alt="Sneaker"
-              class="shrink mr-2"
-              contain
-              src="./image-avatar.png"
-              transition="scale-transition"
-              width="30"
-            />
-          </a>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" v-on="on" rounded icon width="40">
+                <v-img
+                  alt="Account"
+                  contain
+                  src="./image-avatar.png"
+                  transition="scale-transition"
+                  width="30"
+                />
+              </v-btn>
+            </template>
+            <span>Account</span>
+          </v-tooltip>
         </div>
       </v-app-bar>
       <Product />

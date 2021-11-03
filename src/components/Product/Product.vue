@@ -1,6 +1,6 @@
 <template>
-  <conteiner>
-    <div class="d-flex flex-row mb-6 pb-6">
+  <v-conteiner>
+    <div class="d-flex mb-6 pb-6">
       <v-spacer></v-spacer>
       <div>
         <Product_Images />
@@ -14,11 +14,16 @@
           estimations are a skill that is often overlooked, but is important for
           professional developers
         </p>
-        <h2>{{ Price }}</h2>
+        <div class="d-flex">
+          <h2>{{ Price }}</h2>
+          <v-card color="red pa-2 mx-3">
+            <h4>50%</h4>
+          </v-card>
+        </div>
         <del class="d-flex mb-6 pb-6">{{ discount }}</del>
-        <div class="d-flex mb-6 pb-6">
+        <div class="d-flex">
           <v-btn @click="decreaseCounter">-</v-btn>
-          <v-btn width="50">{{ count }}</v-btn>
+          <v-btn width="50" disabled text>{{ count }}</v-btn>
           <v-btn width="50" @click="incremetCounter">+</v-btn>
 
           <v-tooltip bottom>
@@ -40,7 +45,7 @@
         </div>
       </div>
     </div>
-  </conteiner>
+  </v-conteiner>
 </template>
 
 <script>
@@ -58,7 +63,7 @@ export default {
     },
     decreaseCounter: function() {
       if (this.count > 0) {
-        this.count-- - 1;
+        this.count = this.count - 1;
       }
     },
   },
